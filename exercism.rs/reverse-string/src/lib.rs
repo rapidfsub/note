@@ -1,3 +1,7 @@
 pub fn reverse(input: &str) -> String {
-    todo!("Write a function to reverse {input}");
+    let mut result = String::new();
+    for letter in input.chars().rev() {
+        result.push(letter);
+    }
+    result
 }
