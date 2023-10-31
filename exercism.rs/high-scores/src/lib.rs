@@ -1,24 +1,27 @@
 #[derive(Debug)]
-pub struct HighScores;
+pub struct HighScores(Vec<u32>);
 
 impl HighScores {
     pub fn new(scores: &[u32]) -> Self {
-        todo!("Construct a HighScores struct, given the scores: {scores:?}")
+        HighScores(scores.to_vec())
     }
 
     pub fn scores(&self) -> &[u32] {
-        todo!("Return all the scores as a slice")
+        self.0.as_ref()
     }
 
     pub fn latest(&self) -> Option<u32> {
-        todo!("Return the latest (last) score")
+        self.0.last().copied()
     }
 
     pub fn personal_best(&self) -> Option<u32> {
-        todo!("Return the highest score")
+        self.0.iter().max().copied()
     }
 
     pub fn personal_top_three(&self) -> Vec<u32> {
-        todo!("Return 3 highest scores")
+        let mut scores = self.0.clone();
+        scores.sort_by(|lhs, rhs| rhs.cmp(lhs));
+        scores.truncate(3);
+        scores
     }
 }
