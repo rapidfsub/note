@@ -1,8 +1,7 @@
-pub fn collatz(n: u64) -> Option<u64> {
+pub fn collatz(mut n: u64) -> Option<u64> {
     if n < 1 {
         return None;
     }
-    let mut n = n;
     let mut count = 0;
     loop {
         if n == 1 {
@@ -11,10 +10,8 @@ pub fn collatz(n: u64) -> Option<u64> {
             n /= 2;
             count += 1;
         } else {
-            match n.checked_mul(3).and_then(|n| n.checked_add(1)) {
-                Some(result) => (n, count) = (result, count + 1),
-                None => return None,
-            }
+            n = n.checked_mul(3)?.checked_add(1)?;
+            count += 1;
         }
     }
     Some(count)
