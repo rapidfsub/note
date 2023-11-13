@@ -23,8 +23,7 @@ fn main() {
 
     let icount = count as i32;
     let matches: Vec<_> = (0..count)
-        .into_iter()
-        .flat_map(|t1| ((t1 + 1)..count).into_iter().map(move |t2| [t1, t2]))
+        .flat_map(|t1| ((t1 + 1)..count).map(move |t2| [t1, t2]))
         .collect();
     let mut scores = vec![0; count];
     let mut results = vec![0f64; count];
@@ -48,7 +47,7 @@ fn dfs(
     if matches.is_empty() {
         let mut tickets = 2;
         for score in (0..=((count - 1) * 3)).rev() {
-            if tickets <= 0 {
+            if tickets == 0 {
                 break;
             }
             let mut candids: Vec<usize> = vec![];

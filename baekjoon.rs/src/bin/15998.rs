@@ -18,7 +18,7 @@ fn solve() -> Result<i64, Box<dyn Error>> {
     let mut lower_bound: i64 = 0;
     for _ in 0..size {
         stdin().read_line(&mut buffer)?;
-        let tokens: Vec<_> = buffer.trim().split_whitespace().collect();
+        let tokens: Vec<_> = buffer.split_whitespace().collect();
         let diff: i64 = tokens[0].parse()?;
         let value: i64 = tokens[1].parse()?;
 
@@ -40,15 +40,11 @@ fn solve() -> Result<i64, Box<dyn Error>> {
                     }
                 }
                 balance = value;
-            } else {
-                if balance != value {
-                    Err("invalid")?;
-                }
-            }
-        } else {
-            if balance != value {
+            } else if balance != value {
                 Err("invalid")?;
             }
+        } else if balance != value {
+            Err("invalid")?;
         }
 
         buffer.clear();
