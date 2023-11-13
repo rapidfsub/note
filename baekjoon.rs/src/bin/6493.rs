@@ -62,19 +62,15 @@ fn is_slump(text: &str) -> bool {
 }
 
 fn is_slimp(text: &str) -> bool {
-    if text == "AH" {
-        true
-    } else if text.starts_with('A') {
-        if text.ends_with('C') {
-            if text.starts_with("AB") {
-                is_slimp(&text[2..]) || is_slimp(&text[2..(text.len() - 1)])
-            } else {
-                is_slump(&text[1..(text.len() - 1)])
-            }
+    if text.ends_with('C') {
+        if let Some(slimp) = text.strip_prefix("AB") {
+            is_slimp(slimp) || is_slimp(&slimp[..slimp.len() - 1])
+        } else if let Some(slump) = text.strip_prefix('A').and_then(|x| x.strip_suffix('C')) {
+            is_slump(slump)
         } else {
             false
         }
     } else {
-        false
+        text == "AH"
     }
 }
