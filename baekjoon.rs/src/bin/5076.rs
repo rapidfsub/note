@@ -4,44 +4,24 @@ use std::io::{stdin, Read};
 fn main() {
     let mut input = String::new();
     stdin().read_to_string(&mut input).unwrap();
-    let lines: Vec<_> = input.trim().split('\n').collect();
+
     let mut stack: Vec<&str> = vec![];
     let mut results: Vec<bool> = vec![];
-    'outer: for line in lines {
+    'outer: for line in input.trim().split('\n') {
         stack.clear();
         if line == "#" {
             break;
         }
-        let mut started = false;
         let mut start_index = 0_usize;
-        let mut end_index = 0_usize;
         for (index, letter) in line.chars().enumerate() {
             if letter == '<' {
-                started = true;
                 start_index = index;
             } else if letter == '>' {
-                started = false;
-                end_index = index;
-
-                let curr = &line[start_index..=end_index];
+                let curr = &line[start_index..=index];
                 if curr.starts_with("</") {
                     if let Some(prev) = stack.pop() {
-                        let mut open = String::new();
-                        for letter in prev.chars().skip(1) {
-                            if letter == ' ' || letter == '>' {
-                                break;
-                            } else {
-                                open.push(letter);
-                            }
-                        }
-                        let mut close = String::new();
-                        for letter in curr.chars().skip(2) {
-                            if letter == ' ' || letter == '>' {
-                                break;
-                            } else {
-                                close.push(letter);
-                            }
-                        }
+                        let open = get_tag_name(prev);
+                        let close = get_tag_name(curr);
                         if open != close {
                             results.push(false);
                             continue 'outer;
@@ -67,4 +47,18 @@ fn main() {
         }
     }
     println!("{output}");
+}
+
+fn get_tag_name(tag: &str) -> String {
+    let mut result = String::new();
+    for letter in tag.chars().skip(1) {
+        if letter == '<' || letter == '/' {
+            continue;
+        } else if letter == ' ' || letter == '>' {
+            break;
+        } else {
+            result.push(letter);
+        }
+    }
+    result
 }
