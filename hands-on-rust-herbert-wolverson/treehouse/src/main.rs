@@ -10,5 +10,5 @@ fn what_is_your_name() -> String {
     stdin()
         .read_line(&mut your_name)
         .expect("Failed to read line");
-    your_name
+    your_name.trim().to_lowercase()
 }
