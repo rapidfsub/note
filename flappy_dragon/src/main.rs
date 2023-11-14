@@ -129,7 +129,7 @@ impl Player {
 
     fn gravity_and_move(&mut self) {
         if self.velocity < 2.0 {
-            self.velocity += 0.2;
+            self.velocity += 1.0;
         }
         self.y += self.velocity as i32;
         self.x += 1;
@@ -139,7 +139,7 @@ impl Player {
     }
 
     fn flap(&mut self) {
-        self.velocity = -2.0;
+        self.velocity = -3.0;
     }
 }
 
@@ -155,7 +155,7 @@ impl Obstacle {
         Self {
             x,
             gap_y: random.range(10, 40),
-            size: i32::max(2, 20 - score),
+            size: i32::max(2, 10 - score),
         }
     }
 

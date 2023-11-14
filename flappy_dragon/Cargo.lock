@@ -547,6 +547,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "flappy_dragon"
+version = "0.1.0"
+dependencies = [
+ "bracket-lib",
+]
+
+[[package]]
 name = "flate2"
 version = "1.0.28"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -736,13 +743,6 @@ name = "hashbrown"
 version = "0.14.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f93e7192158dbcda357bdec5fb5788eebf8bbac027f3f33e719d29135ae84156"
-
-[[package]]
-name = "hello_bterm"
-version = "0.1.0"
-dependencies = [
- "bracket-lib",
-]
 
 [[package]]
 name = "ident_case"
