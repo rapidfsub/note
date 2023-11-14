@@ -22,16 +22,30 @@ impl Map {
         }
     }
 
-    pub fn render(&self, ctx: &mut BTerm) {
-        for y in 0..SCREEN_HEIGHT {
-            for x in 0..SCREEN_WIDTH {
+    pub fn render(&self, ctx: &mut BTerm, camera: &Camera) {
+        use std::cmp::{max, min};
+        ctx.set_active_console(0);
+        for y in max(0, camera.top_y)..min(camera.bottom_y, SCREEN_HEIGHT) {
+            for x in max(0, camera.left_x)..min(camera.right_x, SCREEN_WIDTH) {
                 let idx = map_idx(x, y);
                 match self.tiles[idx] {
                     TileType::Floor => {
-                        ctx.set(x, y, YELLOW, BLACK, to_cp437('.'));
+                        ctx.set(
+                            x - camera.left_x,
+                            y - camera.top_y,
+                            YELLOW,
+                            BLACK,
+                            to_cp437('.'),
+                        );
                     }
                     TileType::Wall => {
-                        ctx.set(x, y, GREEN, BLACK, to_cp437('#'));
+                        ctx.set(
+                            x - camera.left_x,
+                            y - camera.top_y,
+                            GREEN,
+                            BLACK,
+                            to_cp437('#'),
+                        );
                     }
                 }
             }
