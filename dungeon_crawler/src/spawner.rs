@@ -34,6 +34,7 @@ pub fn spawn_monster(ecs: &mut World, rng: &mut RandomNumberGenerator, pos: Poin
             max: hp,
         },
         Name(name),
+        FieldOfView::new(6),
     ));
 }
 
