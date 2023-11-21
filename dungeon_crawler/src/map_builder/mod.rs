@@ -1,12 +1,15 @@
 mod automata;
 mod drunkard;
 mod empty;
+mod prefab;
 mod rooms;
 
 use crate::prelude::*;
 use automata::CellularAutomataArchitect;
 use drunkard::DrunkardsWalkArchitect;
 use rooms::RoomsArchitect;
+
+use self::prefab::apply_prefab;
 
 const NUM_ROOMS: usize = 20;
 
@@ -25,7 +28,9 @@ impl MapBuilder {
             1 => Box::new(RoomsArchitect {}),
             _ => Box::new(CellularAutomataArchitect {}),
         };
-        architect.new(rng)
+        let mut mb = architect.new(rng);
+        apply_prefab(&mut mb, rng);
+        mb
     }
 
     fn find_most_distance(&self) -> Point {
