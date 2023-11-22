@@ -3,7 +3,7 @@ use crate::prelude::*;
 pub struct DungeonTheme {}
 
 impl DungeonTheme {
-    pub fn new() -> Box<dyn MapTheme> {
+    pub fn map_theme() -> Box<dyn MapTheme> {
         Box::new(Self {})
     }
 }
@@ -21,7 +21,7 @@ impl MapTheme for DungeonTheme {
 pub struct ForestTheme {}
 
 impl ForestTheme {
-    pub fn new() -> Box<dyn MapTheme> {
+    pub fn map_theme() -> Box<dyn MapTheme> {
         Box::new(Self {})
     }
 }
