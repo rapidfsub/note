@@ -1,5 +1,6 @@
 use crate::prelude::*;
 
+#[allow(clippy::borrowed_box)]
 #[system]
 #[read_component(FieldOfView)]
 #[read_component(Player)]

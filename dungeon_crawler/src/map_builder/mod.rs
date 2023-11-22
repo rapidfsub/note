@@ -33,11 +33,11 @@ impl MapBuilder {
             1 => Box::new(RoomsArchitect {}),
             _ => Box::new(CellularAutomataArchitect {}),
         };
-        let mut mb = architect.new(rng);
+        let mut mb = architect.map_builder(rng);
         apply_prefab(&mut mb, rng);
         mb.theme = match rng.range(0, 2) {
-            0 => DungeonTheme::new(),
-            _ => ForestTheme::new(),
+            0 => DungeonTheme::map_theme(),
+            _ => ForestTheme::map_theme(),
         };
         mb
     }
@@ -152,7 +152,7 @@ impl MapBuilder {
 }
 
 trait MapArchitect {
-    fn new(&mut self, rng: &mut RandomNumberGenerator) -> MapBuilder;
+    fn map_builder(&mut self, rng: &mut RandomNumberGenerator) -> MapBuilder;
 }
 
 pub trait MapTheme: Sync + Send {
