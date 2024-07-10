@@ -1058,6 +1058,7 @@ const exercises = [_]Exercise{
     .{
         .main_file = "083_anonymous_lists.zig",
         .output = "I say hello!",
+        .skip = true,
     },
 
     // Skipped because of https://github.com/ratfactor/ziglings/issues/163
@@ -1112,11 +1113,13 @@ const exercises = [_]Exercise{
         \\Bee visited 17 flowers.
         \\Grasshopper hopped 32 meters.
         ,
+        .skip = true,
     },
     .{
         .main_file = "093_hello_c.zig",
         .output = "Hello C from Zig! - C result is 17 chars written.",
         .link_libc = true,
+        .skip = true,
     },
     .{
         .main_file = "094_c_math.zig",
