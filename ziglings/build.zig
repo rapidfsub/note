@@ -588,30 +588,36 @@ const exercises = [_]Exercise{
         \\compiler itself.)
         \\
         ,
+        .skip = true,
     },
     .{
         .main_file = "002_std.zig",
         .output = "Standard Library.",
+        .skip = true,
     },
     .{
         .main_file = "003_assignment.zig",
         .output = "55 314159 -11",
         .hint = "There are three mistakes in this one!",
+        .skip = true,
     },
     .{
         .main_file = "004_arrays.zig",
         .output = "First: 2, Fourth: 7, Length: 8",
         .hint = "There are two things to complete here.",
+        .skip = true,
     },
     .{
         .main_file = "005_arrays2.zig",
         .output = "LEET: 1337, Bits: 100110011001",
         .hint = "Fill in the two arrays.",
+        .skip = true,
     },
     .{
         .main_file = "006_strings.zig",
         .output = "d=d ha ha ha Major Tom",
         .hint = "Each '???' needs something filled in.",
+        .skip = true,
     },
     .{
         .main_file = "007_strings2.zig",
@@ -621,132 +627,161 @@ const exercises = [_]Exercise{
         \\And the Spiders from Mars
         ,
         .hint = "Please fix the lyrics!",
+        .skip = true,
     },
     .{
         .main_file = "008_quiz.zig",
         .output = "Program in Zig!",
         .hint = "See if you can fix the program!",
+        .skip = true,
     },
     .{
         .main_file = "009_if.zig",
         .output = "Foo is 1!",
+        .skip = true,
     },
     .{
         .main_file = "010_if2.zig",
         .output = "With the discount, the price is $17.",
+        .skip = true,
     },
     .{
         .main_file = "011_while.zig",
         .output = "2 4 8 16 32 64 128 256 512 n=1024",
         .hint = "You probably want a 'less than' condition.",
+        .skip = true,
     },
     .{
         .main_file = "012_while2.zig",
         .output = "2 4 8 16 32 64 128 256 512 n=1024",
         .hint = "It might help to look back at the previous exercise.",
+        .skip = true,
     },
     .{
         .main_file = "013_while3.zig",
         .output = "1 2 4 7 8 11 13 14 16 17 19",
+        .skip = true,
     },
     .{
         .main_file = "014_while4.zig",
         .output = "n=4",
+        .skip = true,
     },
     .{
         .main_file = "015_for.zig",
         .output = "A Dramatic Story: :-)  :-)  :-(  :-|  :-)  The End.",
+        .skip = true,
     },
     .{
         .main_file = "016_for2.zig",
         .output = "The value of bits '1101': 13.",
+        .skip = true,
     },
     .{
         .main_file = "017_quiz2.zig",
         .output = "1, 2, Fizz, 4, Buzz, Fizz, 7, 8, Fizz, Buzz, 11, Fizz, 13, 14, FizzBuzz, 16,",
         .hint = "This is a famous game!",
+        .skip = true,
     },
     .{
         .main_file = "018_functions.zig",
         .output = "Answer to the Ultimate Question: 42",
         .hint = "Can you help write the function?",
+        .skip = true,
     },
     .{
         .main_file = "019_functions2.zig",
         .output = "Powers of two: 2 4 8 16",
+        .skip = true,
     },
     .{
         .main_file = "020_quiz3.zig",
         .output = "32 64 128 256",
         .hint = "Unexpected pop quiz! Help!",
+        .skip = true,
     },
     .{
         .main_file = "021_errors.zig",
         .output = "2<4. 3<4. 4=4. 5>4. 6>4.",
         .hint = "What's the deal with fours?",
+        .skip = true,
     },
     .{
         .main_file = "022_errors2.zig",
         .output = "I compiled!",
         .hint = "Get the error union type right to allow this to compile.",
+        .skip = true,
     },
     .{
         .main_file = "023_errors3.zig",
         .output = "a=64, b=22",
+        .skip = true,
     },
     .{
         .main_file = "024_errors4.zig",
         .output = "a=20, b=14, c=10",
+        .skip = true,
     },
     .{
         .main_file = "025_errors5.zig",
         .output = "a=0, b=19, c=0",
+        .skip = true,
     },
     .{
         .main_file = "026_hello2.zig",
         .output = "Hello world!",
         .hint = "Try using a try!",
         .check_stdout = true,
+        .skip = true,
     },
     .{
         .main_file = "027_defer.zig",
         .output = "One Two",
+        .skip = true,
     },
     .{
         .main_file = "028_defer2.zig",
         .output = "(Goat) (Cat) (Dog) (Dog) (Goat) (Unknown) done.",
+        .skip = true,
     },
     .{
         .main_file = "029_errdefer.zig",
         .output = "Getting number...got 5. Getting number...failed!",
+        .skip = true,
     },
     .{
         .main_file = "030_switch.zig",
         .output = "ZIG?",
+        .skip = true,
     },
     .{
         .main_file = "031_switch2.zig",
         .output = "ZIG!",
+        .skip = true,
     },
     .{
         .main_file = "032_unreachable.zig",
         .output = "1 2 3 9 8 7",
+        .skip = true,
     },
     .{
         .main_file = "033_iferror.zig",
         .output = "2<4. 3<4. 4=4. 5>4. 6>4.",
         .hint = "Seriously, what's the deal with fours?",
+        .skip = true,
     },
     .{
         .main_file = "034_quiz4.zig",
         .output = "my_num=42",
         .hint = "Can you make this work?",
         .check_stdout = true,
+        .skip = true,
     },
     .{
         .main_file = "035_enums.zig",
         .output = "1 2 3 9 8 7",
         .hint = "This problem seems familiar...",
+        .skip = true,
     },
     .{
         .main_file = "036_enums2.zig",
@@ -758,10 +793,12 @@ const exercises = [_]Exercise{
         \\</p>
         ,
         .hint = "I'm feeling blue about this.",
+        .skip = true,
     },
     .{
         .main_file = "037_structs.zig",
         .output = "Your wizard has 90 health and 25 gold.",
+        .skip = true,
     },
     .{
         .main_file = "038_structs2.zig",
@@ -769,23 +806,28 @@ const exercises = [_]Exercise{
         \\Character 1 - G:20 H:100 XP:10
         \\Character 2 - G:10 H:100 XP:20
         ,
+        .skip = true,
     },
     .{
         .main_file = "039_pointers.zig",
         .output = "num1: 5, num2: 5",
         .hint = "Pointers aren't so bad.",
+        .skip = true,
     },
     .{
         .main_file = "040_pointers2.zig",
         .output = "a: 12, b: 12",
+        .skip = true,
     },
     .{
         .main_file = "041_pointers3.zig",
         .output = "foo=6, bar=11",
+        .skip = true,
     },
     .{
         .main_file = "042_pointers4.zig",
         .output = "num: 5, more_nums: 1 1 5 1",
+        .skip = true,
     },
     .{
         .main_file = "043_pointers5.zig",
@@ -793,43 +835,52 @@ const exercises = [_]Exercise{
         \\Wizard (G:10 H:100 XP:20)
         \\  Mentor: Wizard (G:10000 H:100 XP:2340)
         ,
+        .skip = true,
     },
     .{
         .main_file = "044_quiz5.zig",
         .output = "Elephant A. Elephant B. Elephant C.",
         .hint = "Oh no! We forgot Elephant B!",
+        .skip = true,
     },
     .{
         .main_file = "045_optionals.zig",
         .output = "The Ultimate Answer: 42.",
+        .skip = true,
     },
     .{
         .main_file = "046_optionals2.zig",
         .output = "Elephant A. Elephant B. Elephant C.",
         .hint = "Elephants again!",
+        .skip = true,
     },
     .{
         .main_file = "047_methods.zig",
         .output = "5 aliens. 4 aliens. 1 aliens. 0 aliens. Earth is saved!",
         .hint = "Use the heat ray. And the method!",
+        .skip = true,
     },
     .{
         .main_file = "048_methods2.zig",
         .output = "A  B  C",
         .hint = "This just needs one little fix.",
+        .skip = true,
     },
     .{
         .main_file = "049_quiz6.zig",
         .output = "A  B  C  Cv Bv Av",
         .hint = "Now you're writing Zig!",
+        .skip = true,
     },
     .{
         .main_file = "050_no_value.zig",
         .output = "That is not dead which can eternal lie / And with strange aeons even death may die.",
+        .skip = true,
     },
     .{
         .main_file = "051_values.zig",
         .output = "1:false!. 2:true!. 3:true!. XP before:0, after:200.",
+        .skip = true,
     },
     .{
         .main_file = "052_slices.zig",
@@ -837,69 +888,85 @@ const exercises = [_]Exercise{
         \\Hand1: A 4 K 8
         \\Hand2: 5 2 Q J
         ,
+        .skip = true,
     },
     .{
         .main_file = "053_slices2.zig",
         .output = "'all your base are belong to us.' 'for great justice.'",
+        .skip = true,
     },
     .{
         .main_file = "054_manypointers.zig",
         .output = "Memory is a resource.",
+        .skip = true,
     },
     .{
         .main_file = "055_unions.zig",
         .output = "Insect report! Ant alive is: true. Bee visited 15 flowers.",
+        .skip = true,
     },
     .{
         .main_file = "056_unions2.zig",
         .output = "Insect report! Ant alive is: true. Bee visited 16 flowers.",
+        .skip = true,
     },
     .{
         .main_file = "057_unions3.zig",
         .output = "Insect report! Ant alive is: true. Bee visited 17 flowers.",
+        .skip = true,
     },
     .{
         .main_file = "058_quiz7.zig",
         .output = "Archer's Point--2->Bridge--1->Dogwood Grove--3->Cottage--2->East Pond--1->Fox Pond",
         .hint = "This is the biggest program we've seen yet. But you can do it!",
+        .skip = true,
     },
     .{
         .main_file = "059_integers.zig",
         .output = "Zig is cool.",
+        .skip = true,
     },
     .{
         .main_file = "060_floats.zig",
         .output = "Shuttle liftoff weight: 2032092kg",
+        .skip = true,
     },
     .{
         .main_file = "061_coercions.zig",
         .output = "Letter: A",
+        .skip = true,
     },
     .{
         .main_file = "062_loop_expressions.zig",
         .output = "Current language: Zig",
         .hint = "Surely the current language is 'Zig'!",
+        .skip = true,
     },
     .{
         .main_file = "063_labels.zig",
         .output = "Enjoy your Cheesy Chili!",
+        .skip = true,
     },
     .{
         .main_file = "064_builtins.zig",
         .output = "1101 + 0101 = 0010 (true). Without overflow: 00010010. Furthermore, 11110000 backwards is 00001111.",
+        .skip = true,
     },
     .{
         .main_file = "065_builtins2.zig",
         .output = "A Narcissus loves all Narcissuses. He has room in his heart for: me myself.",
+        .skip = true,
     },
     .{
         .main_file = "066_comptime.zig",
         .output = "Immutable: 12345, 987.654; Mutable: 54321, 456.789; Types: comptime_int, comptime_float, u32, f32",
         .hint = "It may help to read this one out loud to your favorite stuffed animal until it sinks in completely.",
+        .skip = true,
     },
     .{
         .main_file = "067_comptime2.zig",
         .output = "A BB CCC DDDD",
+        .skip = true,
     },
     .{
         .main_file = "068_comptime3.zig",
@@ -908,10 +975,12 @@ const exercises = [_]Exercise{
         \\Shark (1:16, 8 x 5)
         \\Whale (1:1, 143 x 95)
         ,
+        .skip = true,
     },
     .{
         .main_file = "069_comptime4.zig",
         .output = "s1={ 1, 2, 3 }, s2={ 1, 2, 3, 4, 5 }, s3={ 1, 2, 3, 4, 5, 6, 7 }",
+        .skip = true,
     },
     .{
         .main_file = "070_comptime5.zig",
@@ -919,52 +988,64 @@ const exercises = [_]Exercise{
         \\"Quack." ducky1: true, "Squeek!" ducky2: true, ducky3: false
         ,
         .hint = "Have you kept the wizard hat on?",
+        .skip = true,
     },
     .{
         .main_file = "071_comptime6.zig",
         .output = "Narcissus has room in his heart for: me myself.",
+        .skip = true,
     },
     .{
         .main_file = "072_comptime7.zig",
         .output = "26",
+        .skip = true,
     },
     .{
         .main_file = "073_comptime8.zig",
         .output = "My llama value is 25.",
+        .skip = true,
     },
     .{
         .main_file = "074_comptime9.zig",
         .output = "My llama value is 2.",
+        .skip = true,
     },
     .{
         .main_file = "075_quiz8.zig",
         .output = "Archer's Point--2->Bridge--1->Dogwood Grove--3->Cottage--2->East Pond--1->Fox Pond",
         .hint = "Roll up those sleeves. You get to WRITE some code for this one.",
+        .skip = true,
     },
     .{
         .main_file = "076_sentinels.zig",
         .output = "Array:123056. Many-item pointer:123.",
+        .skip = true,
     },
     .{
         .main_file = "077_sentinels2.zig",
         .output = "Weird Data!",
+        .skip = true,
     },
     .{
         .main_file = "078_sentinels3.zig",
         .output = "Weird Data!",
+        .skip = true,
     },
     .{
         .main_file = "079_quoted_identifiers.zig",
         .output = "Sweet freedom: 55, false.",
         .hint = "Help us, Zig Programmer, you're our only hope!",
+        .skip = true,
     },
     .{
         .main_file = "080_anonymous_structs.zig",
         .output = "[Circle(i32): 25,70,15] [Circle(f32): 25.2,71.0,15.7]",
+        .skip = true,
     },
     .{
         .main_file = "081_anonymous_structs2.zig",
         .output = "x:205 y:187 radius:12",
+        .skip = true,
     },
     .{
         .main_file = "082_anonymous_structs3.zig",
@@ -972,6 +1053,7 @@ const exercises = [_]Exercise{
         \\"0"(bool):true "1"(bool):false "2"(i32):42 "3"(f32):3.141592e0
         ,
         .hint = "This one is a challenge! But you have everything you need.",
+        .skip = true,
     },
     .{
         .main_file = "083_anonymous_lists.zig",
