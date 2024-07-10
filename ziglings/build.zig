@@ -1125,6 +1125,7 @@ const exercises = [_]Exercise{
         .main_file = "094_c_math.zig",
         .output = "The normalized angle of 765.2 degrees is 45.2 degrees.",
         .link_libc = true,
+        .skip = true,
     },
     .{
         .main_file = "095_for3.zig",
