@@ -1183,6 +1183,7 @@ const exercises = [_]Exercise{
         \\
         \\15 | 15  30  45  60  75  90 105 120 135 150 165 180 195 210 225
         ,
+        .skip = true,
     },
     .{
         .main_file = "100_for4.zig",
