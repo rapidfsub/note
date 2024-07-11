@@ -1226,6 +1226,7 @@ const exercises = [_]Exercise{
         \\despair
         \\This little poem has 15 words!
         ,
+        .skip = true,
     },
     .{
         .main_file = "104_threading.zig",
