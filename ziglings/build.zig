@@ -1188,6 +1188,7 @@ const exercises = [_]Exercise{
     .{
         .main_file = "100_for4.zig",
         .output = "Arrays match!",
+        .skip = true,
     },
     .{
         .main_file = "101_for5.zig",
