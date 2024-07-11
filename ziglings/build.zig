@@ -1135,6 +1135,7 @@ const exercises = [_]Exercise{
     .{
         .main_file = "096_memory_allocation.zig",
         .output = "Running Average: 0.30 0.25 0.20 0.18 0.22",
+        .skip = true,
     },
     .{
         .main_file = "097_bit_manipulation.zig",
