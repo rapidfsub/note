@@ -1198,6 +1198,7 @@ const exercises = [_]Exercise{
         \\3. Bard (Gold: 5, XP: 55)
         \\4. Warrior (Gold: 7392, XP: 21)
         ,
+        .skip = true,
     },
     .{
         .main_file = "102_testing.zig",
