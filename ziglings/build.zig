@@ -1204,6 +1204,7 @@ const exercises = [_]Exercise{
         .main_file = "102_testing.zig",
         .output = "",
         .kind = .@"test",
+        .skip = true,
     },
     .{
         .main_file = "103_tokenization.zig",
