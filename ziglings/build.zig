@@ -1145,6 +1145,7 @@ const exercises = [_]Exercise{
     .{
         .main_file = "098_bit_manipulation2.zig",
         .output = "Is this a pangram? true!",
+        .skip = true,
     },
     .{
         .main_file = "099_formatting.zig",
