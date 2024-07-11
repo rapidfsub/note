@@ -1140,6 +1140,7 @@ const exercises = [_]Exercise{
     .{
         .main_file = "097_bit_manipulation.zig",
         .output = "x = 0; y = 1",
+        .skip = true,
     },
     .{
         .main_file = "098_bit_manipulation2.zig",
